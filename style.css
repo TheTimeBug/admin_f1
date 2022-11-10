@@ -14,6 +14,7 @@
     --color-blue:#5DADE2;
     --color-green:green;
     
+    --color-theam:rgb(166, 226, 166);
 
     --card-border-radius:2rem;
     --card-padding:1.8rem;
@@ -63,14 +64,19 @@ body{
 
 .container{
     display: grid;
-    width:96%;
+    width:94%;
     margin : 0 auto;
     gap: 1.8rem;
-    grid-template-columns: 14rem auto 23rem ;
+    grid-template-columns: 14rem auto;
 }
 
 a{
     color: var(--color-black);
+}
+
+.user-icon{
+    border-radius: 50%;
+    
 }
 
 img{
@@ -97,33 +103,52 @@ small{
     font-size: 0.6rem;
 }
 
-/* ===== aside ====*/
-
-aside{
-    height: 100vh;
-   
-}
-aside .top{
-    margin-left:  1.5rem;
+/*top logo*/
+.logo-top{
+    margin-left:  1.8rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-top: 1.4rem;
     vertical-align: text-bottom;
 }
-aside .logo img{
+.logo img{
     width: 3rem;
     height: 3rem;
 }
-aside .logo{
+.logo{
     display: flex;
     gap: 0.8rem;
 }
-aside .logo h2{
+.logo h2{
     font-size: 2.2rem;
 }
-aside .close{
+
+
+/*    head bar  */
+.head-bar{
+    display: grid;
+    width:100%;
+    margin : 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 15% 65% 15% ;
+    position: fixed; 
+    background: var(--color-background);
+    padding-bottom: 1.0rem;
+}
+
+.close{
     display: none;
+}
+.menu{
+    display: none;
+}
+
+/* ===== aside ====*/
+
+aside{
+    height: 100vh;
+   
 }
 aside h3{
     font-weight: 600;
@@ -136,7 +161,9 @@ aside .sidebar{
     flex-direction: column;
     height: 87vh;
     position: relative;
-    top: 2rem;
+    top: 6rem;
+    position: fixed; 
+    background: var(--color-background);
 
 }
 aside .sidebar a{
@@ -210,7 +237,7 @@ aside .sidebar .messagecount{
 
 /*========== main ==========*/
 main{
-    margin-top: 1.4rem;
+    margin-top: 6.4rem;
 }
 main .current-session{
     margin-top: 0.5rem;
@@ -219,3 +246,15 @@ main .current-session h3{
     font-weight: 500;
 }
 
+
+
+
+
+.inner-box{
+    background: var(--color-white);
+    width: 100%;
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    transition: all 300ms ease;
+    text-align: center;
+}
